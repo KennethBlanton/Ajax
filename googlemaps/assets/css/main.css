@@ -28,3 +28,12 @@ button {
 	border-radius:10px;
 	background:white;
 }
+
+
+var request =  {
+	location: lat and long,
+	bounds: 500,
+	query: input.value, 
+}
+
+for()
