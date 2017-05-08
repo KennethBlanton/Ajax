@@ -58,8 +58,33 @@
       newResults = results;
     }
   }
+var Map2 = (function() {
+  var returns = {};
+  function init() {
+    
+  }
+  returns.init = init;
+
+})();
 
 
-  content = ""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

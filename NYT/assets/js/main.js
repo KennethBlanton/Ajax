@@ -2,8 +2,10 @@ console.log("Hello World from main.js!");
 
 function populate(result) {
 	var apiResult = result.response.docs;
-	for (var i = $('div').length - 1; i >= 0; i--) {
-		$('div')[i].parentNode.removeChild($('div')[i]);
+	if($('div').length) {
+		for (var i = $('div').length - 1; i >= 0; i--) {
+			$('div')[i].parentNode.removeChild($('div')[i]);
+		}
 	}
 	for (var i = apiResult.length - 1; i >= 0; i--) {
 		var string = apiResult[i].pub_date;
@@ -48,4 +50,6 @@ $('form').on("submit", function(e){
 	  throw err;
 	});
 })
+
+
 
