@@ -50,6 +50,31 @@ $('form').on("submit", function(e){
 	  throw err;
 	});
 })
+// $.ajax('http://api.openweathermap.org/data/2.5/weather?q={chicago}&APPID=600695d8f79cffd0a57cf32143e038f8')
+// 			.done(function(result){
+// 				console.log(result);
+// 			}).fail(function(){
+// 				console.log('error');
+// 			});
+
+	var url = "http://api.openweathermap.org/data/2.5/weather";
+	url += '?' + $.param({
+	  'APPID': "86e2a35f28eeb52ece2f176c9fcf259b",
+	  'q': 'alaska'
+	});
+	$.ajax({
+	  url: url,
+	  method: 'GET',
+	}).done(function(result) {
+	  console.log(result);
+	}).fail(function(err) {
+	  throw err;
+	});
+
+
+
+
+
 
 
 

@@ -22,9 +22,6 @@ for (var i = 0; i < paragraphs.length; i++) {
 	words(paragraphs[i].innerHTML);
 }
 function replacing(string) {
-	var noPeriod = string.replace(".", '');
-	var noComma = noPeriod.replace(",", '');
-	var noQuestion = noComma.replace("?", '');
 	return noComma.toUpperCase();
 
 };
