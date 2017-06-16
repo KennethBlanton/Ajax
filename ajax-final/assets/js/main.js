@@ -35,8 +35,7 @@ var GoogleModule = (function() {
 		}  
 	  	map = new google.maps.Map(document.getElementById('map'), {
 	    	center: ccLatlng,
-	    	zoom: 8
-	  	});
+	    	zoom: 8	  	});
 
 	  // var stuff= createMarker("test",ccLatlng.lat, ccLatlng.lng);
 	  autoComplete();
@@ -92,7 +91,7 @@ var GoogleModule = (function() {
         autocomplete.bindTo('bounds', map);
         autocomplete.addListener('place_changed', function() {
           var place = autocomplete.getPlace();
-          results = TheCounted.getResults(place.address_components[0].short_name);
+         console.log(place); results=TheCounted.getResults(place.address_components[0].short_name);
           console.log(google.maps.places);
           if (!place.geometry) {
             return;
